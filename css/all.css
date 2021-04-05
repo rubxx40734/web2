@@ -104,6 +104,9 @@ table {
     background-image: url(../assets/header_desktop.png);
     height: 410px;
     background-repeat:repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .layout-pct-txt{
     z-index: 99;
@@ -111,10 +114,10 @@ table {
     color: white;
     text-align: center;
     align-items: center;
-    padding: 130px 0;
     line-height: 1.5;
     font-weight: 500;
     --animate-repeat: 20;
+    overflow: hidden;
 }
 /* ==============================layout end================================== */
 .homepage-secret{
@@ -161,11 +164,6 @@ table {
     justify-content: center;
     background: black;
 }
-.homepage-chef li{
-    width: 50%;
-    text-align: center;
-    background: black; 
-}
 .homepage-chef h2{
     color: white;
     font-weight: 500;
@@ -180,6 +178,7 @@ table {
     line-height: 1.5;
     text-align: left;
     margin-left: 30px;
+    padding: 10px;
 }
 /* ==================customer=================== */
 .homepage-customer{
@@ -238,6 +237,10 @@ table {
 .map-content .form{
     margin-left: 5%;
 }
+.form{
+    display: flex;
+    flex-direction: column;
+}
 .label-txt{
     display: block;
     color: brown;
@@ -248,8 +251,8 @@ table {
     padding: 5px 110px 5px 15px;
 }
 .btn{
-    margin-left: 45%;
-    margin-top: 10%;
+   align-self: flex-end;
+   margin-top: 20px;
 }
 .btn-item{
     padding: 8px 15px;
@@ -257,6 +260,9 @@ table {
     color: white;
     border-radius: 10px;
     cursor: pointer;
+}
+.btn-item:hover{
+    background: gray;
 }
 .mail{
     position: relative;
@@ -281,7 +287,7 @@ table {
     line-height: 1.5;
     font-weight: 520;
 }
-.about h5,.connection h5{
+.about h5, .specil-setting{
     font-size: 20px;
     color: brown;
     margin-bottom: 15px;
@@ -315,6 +321,8 @@ table {
 .icon{
     text-align: right;
     margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
 }  
 .icon img{
     width: 30px;
@@ -362,8 +370,11 @@ table {
         display: flex;
         flex-direction: column;
     }
-    .homepage-chef li{
-        width: 100%;
+    .chef-txt{
+        width: 95%;
+    }
+    .homepage-chef p{
+        width: 95%;
         padding: 20px;
     }
     .homepage-chef img{
@@ -427,7 +438,6 @@ table {
 .foodSelect-item li{
     text-align: left;
     padding: 20px 0px;
-    width: 100%;
 }
 .foodSelect-item li a{
     display: block;
@@ -462,14 +472,17 @@ table {
 .search-item1 button{
     background: brown;
     color: white;
+    cursor: pointer;
 }
 .search-item2{
     display: flex;
 }
-.search-item2 p{
+.search-item2 a{
    color: brown;
    font-weight: 600;
    margin-right: 10px;
+   display: block;
+   text-decoration: none;
 }
 .search-item2 a{
     display: block;
@@ -545,28 +558,35 @@ table {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-left: 0;
     }
     .foodSelect{
-        width: 98%;
+        width: 99%;
+        margin-left: 0;
     }
     .foodCard{
-        width: 98%;
+        width: 99%;
+        margin-left: 0;
     }
     .foodSearch{
         display: flex;
         flex-direction: column;
+        margin-left: 0;
     }
     .search-item2{
         margin-top: 20px;
         align-self: flex-end;
+        margin-left: 0;
     }
     .foodPct{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-left: 0;
     }
     .foodPct li{
-        width: 98%;
+        width: 99%;
+        margin-left: 0;
     }
 }
 /* =====================以下為登入頁面設定======================= */
@@ -576,7 +596,7 @@ table {
     flex-direction: column;
     align-items: center;
 }
-.loginCard h1{
+.loginCard h3{
     color: rgb(71, 9, 9);
     font-size: 55px;
     font-weight: bold;
